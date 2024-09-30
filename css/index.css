@@ -25,7 +25,7 @@ body {
   flex-wrap: wrap;
   width: 80vw;
   max-width: 80vw;
-  z-index: 1;
+  /* z-index: 1; */
   padding: 0px;
 }
 
@@ -37,7 +37,7 @@ body {
   background-repeat: no-repeat;
   background-position: center; */
   width: 100%;
-  z-index: 2;
+  /* z-index: 2; */
   position: fixed;
   display: flex;
   justify-content: space-around;
@@ -84,6 +84,47 @@ body {
   background-color: #3c3836;
   padding: 4px 20px;
   /* border-radius: 10px; */
+}
+
+.dropdown:hover .dmenu {
+  display: flex;
+  flex-direction: column;
+  background-color: #3c3836;
+  border-radius: 5px;
+  padding-top: 50px;
+  width: 80%;
+
+  position: absolute;
+  top: -5px;
+  left: 0px;
+
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #3c3836;
+}
+
+.dmenu {
+  display: none;
+  /* width: 100%; */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown > span {
+  color: #689d6a;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+
+  left: -10px;
+}
+
+.dropdown:hover > span {
+  color: #d75d0e;
 }
 
 a:link,
@@ -163,7 +204,7 @@ a.txt2:hover {
     background-color: #282828;
     width: 100%;
     height: 4vh;
-    z-index: 2;
+    /* z-index: 2; */
     position: fixed;
     bottom: 0;
     display: flex;
@@ -183,7 +224,7 @@ a.txt2:hover {
     display: flex;
     flex: 1;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: -10px;
     align-items: flex-start;
 }
 
@@ -191,7 +232,7 @@ a.txt2:hover {
   display: flex;
   flex: 1;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer-item li {
