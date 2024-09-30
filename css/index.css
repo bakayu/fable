@@ -170,6 +170,7 @@ a:hover {
 .txt3 {
   display: flex;
   flex: 1;
+  font-family: Fira Code;
   font-size: 2em;
   color: #ebdbb2;
   /* margin-left: 3%; */
