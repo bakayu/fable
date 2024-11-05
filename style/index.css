@@ -1,0 +1,280 @@
+/* * {
+    border: #458588 2px solid;
+} */
+
+body {
+    background-color: #f7f4ed;
+    display: flex;
+    margin: 0;
+    width: auto;
+    height: 100vh;
+    max-height: 100vh;
+    max-width: auto;
+    justify-content: center; /* Add transition for smooth movement */
+}
+
+.header {
+    background-color: #0e0f10;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    border-bottom: 1px solid #ebdbb2;
+    flex-wrap: wrap;
+}
+        
+.logo {
+    width: 50px;
+    height: auto;
+    display: flex;
+    flex: 1;
+    margin-left: 17%;
+    justify-content: start;
+    align-items: center;
+}
+  
+.svg-logo {
+    width: 200px;
+    height: auto;
+    animation: gradient-rotation 5s ease infinite;
+}
+
+.logo img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.01); /* Slightly enlarge the image */
+    /* filter: brightness(1.2);  */
+    /* filter: hue-rotate(90deg); */
+}
+
+
+.menu-container {
+    display: flex;
+    flex: 2;
+    justify-content: end;
+    align-items: center;
+    margin-right: 16%;
+}
+
+.menu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.menu li {
+    font-size: 16px;
+    display: inline;
+    margin-right: 20px;
+    text-wrap: nowrap;
+    position: relative;
+}
+
+/* .menu li:not(:nth-last-child(-n+2))::after {
+    content: "";
+    position: absolute;
+    right: -10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px; 
+    background-color: #458588;
+} */
+
+.m-button {
+    padding: 10px 20px;
+    /* background-color: #689d6a; */
+    background: linear-gradient(270deg, #458588, #feb47b, #689d6a, #458588);
+    background-size: 800% 800%;
+    color: #ebdbb2;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    animation: gradient-rotation 5s ease infinite; /* Apply the animation */
+    transition: background 0s ease;
+}
+
+.m-button:hover {
+    background: #458588;
+    /* transition: background 0.3s ease-in; */
+}
+
+a.dim {
+    color: #ebecec;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.dim:hover {
+    text-decoration: none;
+    color: #ebdbb2;
+}
+
+a.dim .color {
+    color: #689d6a;
+    background: linear-gradient(270deg, #458588, #feb47b, #689d6a, #458588);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-rotation 5s infinite;
+    transition: color 0.1s ease;
+}
+
+a.dim:hover .color {
+    background: #458588;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+.body-container-1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-left: 16%;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.body-head-up {
+    display: flex;
+    justify-content: flex-start; /* Align items towards the left */
+    align-items: center;
+    width: 100%; /* Ensure it takes the full width */
+    height: 90%; /* Ensure it takes the full height */
+    margin-bottom: -25%;
+}
+
+.body-head1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: transparent; /* Make the text color transparent */
+    background: linear-gradient(270deg, #458588, #feb47b, #689d6a, #458588);
+    background-size: 800% 800%; /* Ensure the gradient covers a large area */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    display: flex;
+    align-items: center;
+    font-size: 12em;
+    font-weight: 500;
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 0; /* Remove bottom margin */
+    animation: gradient-rotation 5s ease infinite; /* Apply the animation */
+}
+
+.body-heat1:hover {
+    background: #458588;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.body-head2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    font-size: 4em;
+    font-weight: bolder;
+    /* font-weight: 500; */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 0; /* Remove bottom margin */
+    justify-content: start;
+    align-items: center;
+}
+
+.body-head-dw {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    height: 10%;
+    width: 100%; /* Ensure it takes the full width */
+    margin-left: 3%; /* Align with .body-head-up */
+    margin-bottom: -3%;
+}
+
+.body-head-dw-b {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    display: flex;
+    width: 100%;
+    justify-self: center;
+    align-items: center;
+    margin-left: 3%;
+}
+
+.body-img {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.body-img img {
+    width: 80%;
+    height: auto;
+    /* margin-right: 20%; */
+}
+
+.footer {
+    background-color: #0e0f10;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0; /* Position at the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ebdbb2;
+    flex-wrap: wrap;
+}
+
+.footer .menu-container {
+    display: flex;
+    /* flex: 2; */
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 16%; */
+    margin-left: 12%;
+}
+
+.footer .menu {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.footer .menu li {
+    text-decoration: none;
+    font-size: 16px;
+    display: inline;
+    margin-right: 20px;
+    text-wrap: nowrap;
+    position: relative;
+}
+
+@keyframes gradient-rotation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
