@@ -13,6 +13,11 @@ body {
     justify-content: center; /* Add transition for smooth movement */
 }
 
+.home-body {
+    min-height: 200vh; /* Adjust the height as needed */
+}
+
+
 .header {
     background-color: #0e0f10;
     width: 100%;
@@ -26,6 +31,7 @@ body {
     border-bottom: 1px solid #ebdbb2;
     flex-wrap: wrap;
 }
+
         
 .logo {
     width: 50px;
@@ -351,7 +357,10 @@ h1 {
     border-color: #000;
 }
 
-
+.btn-guest {
+    color: #000;
+    border-color: #000;
+}
 
 .create-account {
     margin-top: 20px;
@@ -383,4 +392,274 @@ h1 {
     100% {
         background-position: 0% 50%;
     }
+}
+
+
+
+
+/* for home page */
+
+.home-body {
+    min-height: 200vh; /* Adjust the height as needed */
+}
+
+/* Styles for the home header */
+.home-header {
+    background-color: #0e0f10;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    border-bottom: 1px solid #ebdbb2;
+    flex-wrap: wrap;
+}
+
+.header-container-h {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-left: 25%;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.menu li:not(:last-child)::after {
+    font-size: 1.5em;
+    content: "/";
+    margin-left: 10px;
+    color: #ebecec;
+}
+
+.svg-logo-h {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+    animation: gradient-rotation 5s ease infinite;
+}
+
+.svg-logo-h:hover {
+    transform: scale(1.01); /* Slightly enlarge the image */
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-left: 30%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    z-index: 1000;
+}
+
+.fixed-nav .menu li a {
+    color: #0e0f10; /* Darker text color */
+}
+
+.fixed-nav .menu li:not(:last-child)::after {
+    font-size: 1.5em;
+    content: "/";
+    margin-left: 10px;
+    color: #0e0f10;
+}
+
+.fixed-nav .svg-logo-h {
+    content: url('../img/logo-light.svg'); /* Load the light logo */
+}
+
+
+
+body.no-scroll {
+    overflow: hidden; /* Disable main page scrollbar */
+}
+
+.sidebar {
+    width: 350px;
+    height: 100vh;
+    background-color: rgba(63, 132, 134, 0.95);
+    position: fixed;
+    top: 0;
+    right: -350px; /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Ensure the sidebar has its own scrollbar */
+}
+
+.sidebar.show {
+    transform: translateX(-350px); /* Slide in from the right */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.close-sidebar {
+    font-size: 2em;
+    cursor: pointer;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0);
+}
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    font-size: 1em;
+    padding: 20px;
+}
+
+.bottom-sections {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 5%;
+    padding: 20px;
+    background-color: rgba(63, 132, 134, 0.95);
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: #ebdbb2;
+}
+
+.search-box {
+    display: flex;
+    font-size: 1em;
+    align-items: center;
+    margin-bottom: 2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    filter: invert();
+}
+
+.menu-item {
+    font-family: sans-serif;
+    font-size: 2em;
+    color: #ebecec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+.menu-item.last-child {
+    border-bottom: 0px;
+}
+
+.menu-item:hover {
+    color: #ebdbb2;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item i {
+    color: #00ffea;
+}
+
+.account-buttons {
+    font-family: sans-serif;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #ebdbb2;
+}
+
+.account-buttons span {
+    color: #ebdbb2;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+    filter: invert();
+    transition: color 0.3s;
+}
+
+.social-link:hover img {
+    filter: brightness(0.8);
+}
+
+
+.home-body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 20px 20px;
+    background-color: #f7f4ed;
+}
+
+.home-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+.home-logo-title {
+    margin-bottom: 20px;
+}
+
+.logo-title {
+    width: 200px;
+    height: auto;
+    animation: gradient-rotation 5s ease infinite;
+    transition: transform 0.3s ease;
+}
+
+.logo-title:hover {
+    transform: scale(1.05); /* Slightly enlarge the logo on hover */
+}
+
+.home-generated-text p {
+    font-size: 18px;
+    color: #0e0f10;
+    max-width: 800px;
+    margin: 0 auto;
 }
