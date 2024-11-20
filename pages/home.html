@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fable</title>
-    <link rel="stylesheet" href="../style/index.css">
-    <script src="../script/navbar.js"></script>
-    <script src="../script/index.js" defer></script>
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fable</title>
+  <link rel="stylesheet" href="../style/index.css">
+  <script src="../script/navbar.js"></script>
+  <script src="../script/index.js" defer></script>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
+
 <body class="home-body">
-    <div class="home-header">
-        <div class="header-container-h">
-            <nav class="menu-container body">
-                <ul class="menu">
-                    <li>
-                        <a href="home.html">
-                            <img src="../img/logo.svg" alt="Logo" class="svg-logo-h" type="image/svg+xml" />
-                        </a>
-                    </li>
-                    <li><a href="#" class="dim">Tech</a></li>
-                    <li><a href="#" class="dim">Science</a></li>
-                    <li><a href="#" class="dim">AI</a></li>
-                    <li><a href="#" class="dim">Entertainment</a></li>
-                    <li><a href="#" class="dim">Gaming</a></li>
-                    <li class="m-button" onclick="toggleSidebar()">More +</li>
-                </ul>
-            </nav>
-        </div>
+  <div class="home-header">
+    <div class="header-container-h">
+      <nav class="menu-container body">
+        <ul class="menu">
+          <li>
+            <a href="home.html">
+              <img src="../img/logo.svg" alt="Logo" class="svg-logo-h" type="image/svg+xml" />
+            </a>
+          </li>
+          <li><a href="#" class="dim">Tech</a></li>
+          <li><a href="#" class="dim">Science</a></li>
+          <li><a href="#" class="dim">AI</a></li>
+          <li><a href="#" class="dim">Entertainment</a></li>
+          <li><a href="#" class="dim">Gaming</a></li>
+          <li class="m-button" onclick="toggleSidebar()">More +</li>
+        </ul>
+      </nav>
     </div>
+  </div>
 
 
-    <!-- <div class="home-body-container">
+  <!-- <div class="home-body-container">
         <div class="home-container">
             <div class="home-logo-title">
                 <img src="../img/logo-light.svg" alt="Logo Title" class="logo-title" />
@@ -54,118 +56,122 @@
 
 
 
-    <!-- Hidden Sidebar -->
-    <nav class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <span class="close-sidebar" onclick="toggleSidebar()">&times;</span>
-        </div>
-        <div class="main-content">
-            <div class="search-box">
-                <input type="text" placeholder="SEARCH...">
-                <img src="../img/search.svg" alt="Search Icon" class="search-icon">
-            </div>
-            <div class="menu-item">Tech</div>
-            <div class="menu-item">Reviews</div>
-            <div class="menu-item">Entertainment</div>
-            <div class="menu-item">AI</div>
-            <div class="menu-item">Cars</div>
-            <div class="menu-item">Features</div>
-            <div class="menu-item">Videos</div>
-            <div class="menu-item">Podcasts</div>
-            <div class="menu-item">Store</div>
-            <div class="menu-item last-child">News Letter</div>
-        
-            <div class="bottom-sections">
-                <div class="section">
-                    <div class="section-title">Account</div>
-                    <div class="section">
-                        <div class="account-buttons">
-                            <a href="#" id="sidebarLoginLink" class="dim">Log In</a>
-                            <span>/</span>
-                            <a href="#" id="sidebarSignupLink" class="dim">Sign Up</a>
-                        </div>
-                    </div>
-                    <div class="section-title">Follow Us</div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><img src="../img/github.svg" alt="GitHub"></a>
-                        <a href="#" class="social-link"><img src="../img/facebook.svg" alt="Facebook"></a>
-                        <a href="#" class="social-link"><img src="../img/twitter.svg" alt="Twitter"></a>
-                        <a href="#" class="social-link"><img src="../img/instagram.svg" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <!-- Hidden Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="close-sidebar" onclick="toggleSidebar()">&times;</span>
+    </div>
+    <div class="main-content">
+      <div class="search-box">
+        <input type="text" placeholder="SEARCH...">
+        <img src="../img/search.svg" alt="Search Icon" class="search-icon">
+      </div>
+      <div class="menu-item">Tech</div>
+      <div class="menu-item">Reviews</div>
+      <div class="menu-item">Entertainment</div>
+      <div class="menu-item">AI</div>
+      <div class="menu-item">Cars</div>
+      <div class="menu-item">Features</div>
+      <div class="menu-item">Videos</div>
+      <div class="menu-item">Podcasts</div>
+      <div class="menu-item">Store</div>
+      <div class="menu-item last-child">News Letter</div>
 
-    <!-- sign in element -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h1>Sign in</h1>
-          <a href="#" class="btn btn-google"
-            ><img
-              src="../img/google.svg"
-              alt="Google Login"
-              class="social-icon"
-            />Sign in with Google</a
-          >
-          <a href="#" class="btn btn-github"
-            ><img
-              src="../img/github.svg"
-              alt="GitHub Login"
-              class="social-icon"
-            />Sign in with GitHub</a
-          >
-          <a href="#" class="btn btn-email"
-            ><img src="../img/email.svg" alt="email" class="social-icon" />Sign in
-            with email</a
-          >
-          <!-- <a href="pages/home.html" class="btn btn-guest">
-            <img src="../img/guest.svg" alt="guest" class="social-icon" />Sign in as guest
-          </a> -->
-          <div class="create-account">
-            No account? <a href="#" id="createAccountLink">Create one</a>
+      <div class="bottom-sections">
+        <div class="section">
+          <div class="section-title">Account</div>
+          <div class="section">
+            <div class="account-buttons">
+              <a href="#" id="sidebarLoginLink" class="dim">Log In</a>
+              <span>/</span>
+              <a href="#" id="sidebarSignupLink" class="dim">Sign Up</a>
+            </div>
           </div>
-          <div class="help-links">
-            <p>Forgot email or trouble signing in? <a href="#">Get help.</a></p>
+          <div class="section-title">Follow Us</div>
+          <div class="social-links">
+            <a href="#" class="social-link"><img src="../img/github.svg" alt="GitHub"></a>
+            <a href="#" class="social-link"><img src="../img/facebook.svg" alt="Facebook"></a>
+            <a href="#" class="social-link"><img src="../img/twitter.svg" alt="Twitter"></a>
+            <a href="#" class="social-link"><img src="../img/instagram.svg" alt="Instagram"></a>
           </div>
         </div>
       </div>
-  
-      <!-- sign up element -->
-      <div id="signupModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h1>Sign up</h1>
-          <a href="#" class="btn btn-google"
-            ><img
-              src="../img/google.svg"
-              alt="Google Login"
-              class="social-icon"
-            />Sign up with Google</a
-          >
-          <a href="#" class="btn btn-github"
-            ><img
-              src="../img/github.svg"
-              alt="GitHub Login"
-              class="social-icon"
-            />Sign up with GitHub</a
-          >
-          <a href="#" class="btn btn-email"
-            ><img src="../img/email.svg" alt="email" class="social-icon" />Sign up with email</a
-          >
-          <div class="create-account">
-            Already have an account? <a href="#" id="signInLink">Sign in</a>
-          </div>
-          <div class="help-links">
-            <p>Forgot email or trouble signing up? <a href="#">Get help.</a></p>
-          </div>
+    </div>
+  </nav>
+
+  <!-- sign in element -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Sign in</h1>
+      <form class="sign-up-form">
+        <div class="btn btn-input">
+          <input type="text" id="username" name="username" required class="input-field" placeholder=" " />
+          <label for="username">@Username</label>
         </div>
+        <div class="btn btn-input">
+          <input type="password" id="password" name="password" required class="input-field" placeholder=" " />
+          <label for="password">#Password</label>
+        </div>
+        <div class="btn btn-submit">
+          <button type="submit" class="submit-button">Sign Up</button>
+        </div>
+      </form>
+      <h2>Or</h2>
+      <a href="#" class="btn btn-google"><img src="../img/google.svg" alt="Google Login" class="social-icon" />Sign in
+        with
+        Google</a>
+      <a href="#" class="btn btn-github"><img src="../img/github.svg" alt="GitHub Login" class="social-icon" />Sign in
+        with
+        GitHub</a>
+      <!-- <a href="#" class="btn btn-email"><img src="../img/email.svg" alt="email" class="social-icon" />Sign in
+        with email</a> -->
+      <div class="create-account">
+        No account? <a href="#" id="createAccountLink">Create one</a>
       </div>
+      <div class="help-links">
+        <p>Forgot email or trouble signing in? <a href="#">Get help.</a></p>
+      </div>
+    </div>
+  </div>
 
+  <!-- sign up element -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Sign up</h1>
+      <form class="sign-up-form" action="home.html" method="get">
+        <div class="btn btn-input">
+          <input type="text" id="username" name="username" required class="input-field" placeholder=" " />
+          <label for="username">@Username</label>
+        </div>
+        <div class="btn btn-input">
+          <input type="password" id="password" name="password" required class="input-field" placeholder=" " />
+          <label for="password">#Password</label>
+        </div>
+        <div class="btn btn-submit">
+          <button type="submit" class="submit-button">Sign Up</button>
+        </div>
+      </form>
+      <h2>Or</h2>
+      <a href="#" class="btn btn-google">
+        <img src="../img/google.svg" alt="Google Login" class="social-icon" />Sign up with Google
+      </a>
+      <a href="#" class="btn btn-github">
+        <img src="../img/github.svg" alt="GitHub Login" class="social-icon" />Sign up with GitHub
+      </a>
+      <!-- <a href="#" class="btn btn-email">
+        <img src="../img/email.svg" alt="email" class="social-icon" />Sign up with email
+      </a> -->
+      <div class="create-account">
+        Already have an account? <a href="#" id="signInLink">Sign in</a>
+      </div>
+      <div class="help-links">
+        <p>Forgot email or trouble signing up? <a href="#">Get help.</a></p>
+      </div>
+    </div>
+  </div>
 
-
-
-      
 </body>
+
 </html>
