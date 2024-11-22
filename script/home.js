@@ -12,14 +12,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const closeButton = document.querySelector('.close-sidebar');
     const header = document.querySelector('.home-header');
 
-    // Handle scroll event to detach the nav bar
-    // window.addEventListener('scroll', () => {
-    //     if (window.scrollY > 50) {
-    //         header.classList.add('fixed-nav');
-    //     } else {
-    //         header.classList.remove('fixed-nav');
-    //     }
-    // });
 
     // Toggle sidebar
     function toggleSidebar() {
