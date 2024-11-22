@@ -1,0 +1,109 @@
+/* From Uiverse.io by vinodjangid07 */
+.home-body {
+    display: flex;
+    min-height: 200vh;
+    background-image: none;
+    background: #f3f3f3;
+    /* background-image: repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, 0.2),
+            1px,
+            white 1px,
+            white);
+    background-size: 100% 30px;
+    background-color: white; */
+
+}
+
+.sb-cont {
+    display: flex;
+    height: 33px;
+    width: 350px;
+}
+
+.InputContainer {
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    padding-left: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.input {
+    width: 150px;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    caret-color: black;
+    transition: width 0.3s ease;
+}
+
+/* .input:active {
+    width: 250px;
+} */
+
+.input:focus {
+    width: 250px;
+}
+
+.labelforsearch {
+    cursor: text;
+    padding: 0px 12px;
+}
+
+.searchIcon {
+    width: 13px;
+}
+
+.border {
+    height: 40%;
+    width: 1.3px;
+    background-color: #689d6a;
+}
+
+.micIcon {
+    width: 12px;
+}
+
+.micButton {
+    padding: 0px 15px 0px 12px;
+    border: none;
+    background-color: transparent;
+    height: 40px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.searchIcon path {
+    fill: #689d6a;
+}
+
+.micIcon path {
+    fill: #689d6a;
+}
+
+.micButton:hover {
+    background-color: #dbdbdb;
+    transition-duration: .3s;
+}
+
+.home-body-content {
+    /* z-index: 1; */
+    display: flex;
+    width: 80%;
+    /* border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+    background-image: repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, 0.2),
+            1px,
+            white 1px,
+            white);
+    background-size: 100% 30px;
+    background-color: white; */
+}
