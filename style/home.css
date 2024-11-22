@@ -1,18 +1,45 @@
 /* From Uiverse.io by vinodjangid07 */
 .home-body {
+    background-color: #f7f4ed;
     display: flex;
+    margin: 0;
+    width: auto;
+    height: auto;
     min-height: 200vh;
-    background-image: none;
-    background: #f3f3f3;
-    /* background-image: repeating-linear-gradient(0deg,
-            rgba(0, 0, 0, 0.2),
-            1px,
-            white 1px,
-            white);
-    background-size: 100% 30px;
-    background-color: white; */
+    justify-content: center;
 
+    --color: #E1E1E1;
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+
+    background-color: #fceed6;
+    background-image:
+        linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 35px 35px;
+
+    position: relative;
+    overflow: hidden;
 }
+
+body::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    width: 125px;
+    height: 125px;
+    pointer-events: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    /* Semi-transparent black */
+    transform: translate(-50%, -50%);
+    mix-blend-mode: multiply;
+    /* Darkens the underlying colors */
+    transition: top 0s ease, left 0s ease, background 0s ease;
+}
+
 
 .sb-cont {
     display: flex;
@@ -42,10 +69,6 @@
     caret-color: black;
     transition: width 0.3s ease;
 }
-
-/* .input:active {
-    width: 250px;
-} */
 
 .input:focus {
     width: 250px;
@@ -93,17 +116,92 @@
 }
 
 .home-body-content {
-    /* z-index: 1; */
     display: flex;
+    flex-direction: row;
     width: 80%;
-    /* border-left: 1px solid rgba(0, 0, 0, 0.2);
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    margin: 0px 155px 60px;
+    padding-top: 140px;
+}
 
-    background-image: repeating-linear-gradient(0deg,
-            rgba(0, 0, 0, 0.2),
-            1px,
-            white 1px,
-            white);
-    background-size: 100% 30px;
-    background-color: white; */
+.main-left {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    /* width: 100%; */
+}
+
+.main-left a {
+    text-decoration: none;
+}
+
+.main-left h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    color: #689d6a;
+    text-shadow: -3px -2px rgba(0, 0, 0, 0.2);
+    margin-top: -40px;
+    text-align: center;
+    margin-bottom: -15px;
+    transition: color 0.3s ease, text-shadow 0.2s ease;
+}
+
+.main-left h2:hover {
+    color: #568987;
+    text-shadow: 3px -2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease, text-shadow 0.2s ease;
+}
+
+.main-left h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5em;
+    text-shadow: 4px 3px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+    color: #568987;
+    margin-top: -30px;
+    text-align: right;
+    transition: color 0.3s ease, text-shadow 0.2s ease;
+}
+
+.main-left h1:hover {
+    color: #689d6a;
+    text-shadow: 5px -5px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease, text-shadow 0.2s ease;
+}
+
+.ml-content {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+.ml-content img {
+    width: 80%;
+    height: auto;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    /* margin-left: 100px; */
+}
+
+.ml-content h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    margin: 20px 0px;
+    writing-mode: vertical-rl;
+}
+
+.main-right {
+    display: flex;
+    flex: 1;
+    /* flex-direction: column; */
+    /* width: 100%; */
+}
+
+.home-body-top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
 }

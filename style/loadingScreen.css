@@ -1,4 +1,8 @@
-/* From Uiverse.io by Nawsome */
+.loading-overlay {
+    background: #fceed6;
+    background-color: #fceed6;
+}
+
 .socket {
     width: 200px;
     height: 200px;

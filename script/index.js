@@ -81,6 +81,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             // Redirect to home page
             window.location.href = 'pages/home.html';
-        }, 2000); // 2 second delay for demo
+        }, 2090); // add delay
     });
 });

@@ -7,8 +7,10 @@
   <title>Fable</title>
   <link rel="stylesheet" href="../style/index.css">
   <link rel="stylesheet" href="../style/home.css">
+  <link rel="stylesheet" href="../style/elements.css">
   <script src="../script/home.js"></script>
   <script src="../script/searchbar.js"></script>
+  <script src="../script/cursor.js"></script>
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 
@@ -62,7 +64,17 @@
   </div>
 
   <div class="home-body-content">
-
+    <div class="main-left">
+      <h2>Today's Top Post</h2>
+      <div class="ml-content">
+        <h1>............................<br></h1>
+        <img src="../img/thumbnail2.avif" alt="">
+      </div>
+      <a href="#">
+        <h1>Embracing Open Source Technology: A Gateway to Innovation</h1>
+      </a>
+    </div>
+    <div class="main-right"></div>
   </div>
 
   <!-- Hidden Sidebar -->
@@ -89,13 +101,13 @@
       <div class="bottom-sections">
         <div class="section">
           <div class="section-title">Account</div>
-          <div class="section">
-            <div class="account-buttons">
-              <a href="#" id="sidebarLoginLink" class="dim">Log In</a>
-              <span>/</span>
-              <a href="#" id="sidebarSignupLink" class="dim">Sign Up</a>
-            </div>
+          <div class="account-buttons" id="userInfo">
+            <!-- Initially show Log In and Sign Up links -->
+            <a href="#" id="sidebarLoginLink" class="dim">Log In</a>
+            <span>/</span>
+            <a href="#" id="sidebarSignupLink" class="dim">Sign Up</a>
           </div>
+
           <div class="section-title">Follow Us</div>
           <div class="social-links">
             <a href="#" class="social-link"><img src="../img/github.svg" alt="GitHub"></a>
