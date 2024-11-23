@@ -1,137 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/index.css" />
-    <script src="script/index.js"></script>
-    <title>fable</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <!-- <img src="img/logo.svg" alt=""> -->
-    <div class="header">
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="img/logo.svg"
-            alt="Logo"
-            class="svg-logo"
-            type="image/svg+xml"
-          />
-        </a>
-      </div>
-      <nav class="menu-container">
-        <ul class="menu">
-          <li>
-            <a href="#" class="dim">Our <span class="color">Story</span></a>
-          </li>
-          <li>
-            <a href="#" class="dim join-fable"
-              >Join <span class="color">Fable</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="dim sign-in-link"
-              >Sign <span class="color">in</span></a
-            >
-          </li>
-          <li class="m-button">Get Started</li>
-        </ul>
-      </nav>
-    </div>
-    <div class="body-container-1">
-      <div class="body-head-up">
-        <div class="body-head1">C</div>
-        <div class="body-head2">hronicles<br />of Timeless Wisdom</div>
-      </div>
-      <div class="body-head-dw">
-        Where Stories Unfold, Knowledge Blossoms, and Ideas Flourish.
-      </div>
-      <div class="body-head-dw-b">
-        <span class="m-button">Create Fable</span>
-      </div>
-    </div>
-    <div class="body-img">
-      <img src="img/landpage1.webp" alt="body-img" />
-    </div>
-    <footer class="footer">
-      <div class="menu-container">
-        <ul class="menu">
-          <li><a class="dim" href="#home">Help</a></li>
-          <li><a class="dim" href="#about">About</a></li>
-          <li><a class="dim" href="#Blog">Blog</a></li>
-          <li><a class="dim" href="#Privacy">Privacy</a></li>
-          <li><a class="dim" href="#Terms">Terms</a></li>
-          <li><a class="dim" href="#Contact us">Contact us</a></li>
-        </ul>
-      </div>
-    </footer>
 
-    <!-- sign in element -->
-    <div id="loginModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h1>Sign in</h1>
-        <a href="#" class="btn btn-google"
-          ><img
-            src="img/google.svg"
-            alt="Google Login"
-            class="social-icon"
-          />Sign in with Google</a
-        >
-        <a href="#" class="btn btn-github"
-          ><img
-            src="img/github.svg"
-            alt="GitHub Login"
-            class="social-icon"
-          />Sign in with GitHub</a
-        >
-        <a href="#" class="btn btn-email"
-          ><img src="img/email.svg" alt="email" class="social-icon" />Sign in
-          with email</a
-        >
-        <a href="pages/home.html" class="btn btn-guest">
-          <img src="img/guest.svg" alt="guest" class="social-icon" />Sign in as guest
-        </a>
-        <div class="create-account">
-          No account? <a href="#" id="createAccountLink">Create one</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/index.css" />
+  <link rel="stylesheet" href="style/loadingScreen.css">
+  <script src="script/index.js"></script>
+  <script src="script/cursor.js"></script>
+  <title>fable</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- <img src="img/logo.svg" alt=""> -->
+  <div class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo.svg" alt="Logo" class="svg-logo" type="image/svg+xml" />
+      </a>
+    </div>
+    <nav class="menu-container">
+      <ul class="menu index">
+        <li>
+          <a href="#" class="dim">About <span class="color">Us</span></a>
+        </li>
+        <li>
+          <a href="#" class="dim">Our <span class="color">Blog</span></a>
+        </li>
+        <li>
+          <a href="#" class="dim join-fable">Write <span class="color">Blog</span></a>
+        </li>
+        <li>
+          <a href="#" class="dim sign-in-link">Sign <span class="color">in</span></a>
+        </li>
+        <li class="m-button dark"><a href="#" class="dim">Get Started</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="body-container-1">
+    <div class="body-head-up">
+      <div class="body-head1">F</div>
+      <div class="body-head2">Blogging Website<br />ABLE</div>
+    </div>
+    <div class="body-head-dw">
+      Where Stories Unfold, Knowledge Blossoms, and Ideas Flourish.
+    </div>
+    <div class="body-head-dw-b">
+      <span class="m-button"><a href="#" class="dim">Create a Fable</a></span>
+    </div>
+  </div>
+  <div class="body-img">
+    <img src="img/landpage1.webp" alt="body-img" />
+  </div>
+  <footer class="footer">
+    <div class="menu-container">
+      <ul class="menu index">
+        <li><a class=" dim" href="#home">Help</a></li>
+        <li><a class="dim" href="#about">About</a></li>
+        <li><a class="dim" href="#Blog">Blog</a></li>
+        <li><a class="dim" href="#Privacy">Privacy</a></li>
+        <li><a class="dim" href="#Terms">Terms</a></li>
+        <li><a class="dim" href="#Contact us">Contact us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- sign in element -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Sign in</h1>
+      <form class="sign-in-form">
+        <div class="btn btn-input">
+          <input type="text" id="username" name="username" required class="input-field" placeholder=" " />
+          <label for="username">@Username</label>
         </div>
-        <div class="help-links">
-          <p>Forgot email or trouble signing in? <a href="#">Get help.</a></p>
+        <div class="btn btn-input">
+          <input type="password" id="password" name="password" required class="input-field" placeholder=" " />
+          <label for="password">#Password</label>
         </div>
+        <div class="btn btn-submit">
+          <button type="submit" class="submit-button">Sign in</button>
+        </div>
+      </form>
+      <h2>Or</h2>
+      <a href="#" class="btn btn-google"><img src="img/google.svg" alt="Google Login" class="social-icon" />Sign in with
+        Google</a>
+      <a href="#" class="btn btn-github"><img src="img/github.svg" alt="GitHub Login" class="social-icon" />Sign in with
+        GitHub</a>
+      <!-- <a href="#" class="btn btn-email"><img src="img/email.svg" alt="email" class="social-icon" />Sign in
+        with email</a> -->
+      <a href="pages/home.html" class="btn btn-guest">
+        <img src="img/guest.svg" alt="guest" class="social-icon" />Sign in as guest
+      </a>
+      <div class="create-account">
+        No account? <a href="#" id="createAccountLink">Create one</a>
       </div>
+      <div class="help-links">
+        <p>Forgot email or trouble signing in? <a href="#">Get help.</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- sign up element -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Sign up</h1>
+      <form class="sign-up-form" action="pages/home.html" method="get">
+        <div class="btn btn-input">
+          <input type="text" id="username" name="username" required class="input-field" placeholder=" " />
+          <label for="username">@Username</label>
+        </div>
+        <div class="btn btn-input">
+          <input type="password" id="password" name="password" required class="input-field" placeholder=" " />
+          <label for="password">#Password</label>
+        </div>
+        <div class="btn btn-submit">
+          <button type="submit" class="submit-button">Sign Up</button>
+        </div>
+      </form>
+      <h2>Or</h2>
+      <a href="#" class="btn btn-google">
+        <img src="img/google.svg" alt="Google Login" class="social-icon" />Sign up with Google
+      </a>
+      <a href="#" class="btn btn-github">
+        <img src="img/github.svg" alt="GitHub Login" class="social-icon" />Sign up with GitHub
+      </a>
+      <!-- <a href="#" class="btn btn-email">
+        <img src="img/email.svg" alt="email" class="social-icon" />Sign up with email
+      </a> -->
+      <div class="create-account">
+        Already have an account? <a href="#" id="signInLink">Sign in</a>
+      </div>
+      <div class="help-links">
+        <p>Forgot email or trouble signing up? <a href="#">Get help.</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="socket">
+    <div class="gel center-gel">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c1 r1">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c2 r1">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c3 r1">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c4 r1">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c5 r1">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c6 r1">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
     </div>
 
-    <!-- sign up element -->
-    <div id="signupModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h1>Sign up</h1>
-        <a href="#" class="btn btn-google"
-          ><img
-            src="img/google.svg"
-            alt="Google Login"
-            class="social-icon"
-          />Sign up with Google</a
-        >
-        <a href="#" class="btn btn-github"
-          ><img
-            src="img/github.svg"
-            alt="GitHub Login"
-            class="social-icon"
-          />Sign up with GitHub</a
-        >
-        <a href="#" class="btn btn-email"
-          ><img src="img/email.svg" alt="email" class="social-icon" />Sign up with email</a
-        >
-        <div class="create-account">
-          Already have an account? <a href="#" id="signInLink">Sign in</a>
-        </div>
-        <div class="help-links">
-          <p>Forgot email or trouble signing up? <a href="#">Get help.</a></p>
-        </div>
-      </div>
+    <div class="gel c7 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
     </div>
-  </body>
+
+    <div class="gel c8 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c9 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c10 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c11 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c12 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c13 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c14 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c15 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c16 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c17 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c18 r2">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c19 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c20 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c21 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c22 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c23 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c24 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c25 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c26 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c28 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c29 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c30 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c31 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c32 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c33 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c34 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c35 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c36 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+    <div class="gel c37 r3">
+      <div class="hex-brick h1"></div>
+      <div class="hex-brick h2"></div>
+      <div class="hex-brick h3"></div>
+    </div>
+
+  </div>
+</div>
+
 </html>

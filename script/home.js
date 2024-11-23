@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const closeButtons = document.querySelectorAll(".close");
     const createAccountLink = document.getElementById("createAccountLink");
     const signInLink = document.getElementById("signInLink");
-    const joinFableLink = document.querySelector(".menu a.join-fable");
-    const navSignInLink = document.querySelector(".menu a.sign-in-link");
     const sidebarLoginLink = document.getElementById("sidebarLoginLink");
     const sidebarSignupLink = document.getElementById("sidebarSignupLink");
     const sidebar = document.getElementById('sidebar');
@@ -14,14 +12,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const closeButton = document.querySelector('.close-sidebar');
     const header = document.querySelector('.home-header');
 
-    // Handle scroll event to detach the nav bar
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('fixed-nav');
-        } else {
-            header.classList.remove('fixed-nav');
-        }
-    });
 
     // Toggle sidebar
     function toggleSidebar() {
@@ -46,60 +36,75 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
-    // Prevent closing sidebar when clicking inside it
-    sidebar.addEventListener('click', (event) => {
-        event.stopPropagation();
-    });
-
-    // Handle sidebar login and sign-up links
-    sidebarLoginLink.onclick = function(event) {
+    // Function to open login modal
+    function openLoginModal(event) {
         event.preventDefault();
-        signupModal.style.display = "none";
         loginModal.style.display = "block";
-        toggleSidebar(); // Close the sidebar
+        // Close the sidebar if it's open
+        if (sidebar.classList.contains('show')) {
+            toggleSidebar();
+        }
     }
 
-    sidebarSignupLink.onclick = function(event) {
+    // Function to open signup modal
+    function openSignupModal(event) {
         event.preventDefault();
-        loginModal.style.display = "none";
         signupModal.style.display = "block";
-        toggleSidebar(); // Close the sidebar
+        // Close the sidebar if it's open
+        if (sidebar.classList.contains('show')) {
+            toggleSidebar();
+        }
     }
 
-    closeButtons.forEach(button => {
-        button.onclick = function() {
+    // Event listeners for sidebar links
+    if (sidebarLoginLink) {
+        sidebarLoginLink.addEventListener('click', openLoginModal);
+    }
+
+    if (sidebarSignupLink) {
+        sidebarSignupLink.addEventListener('click', openSignupModal);
+    }
+
+    // Event listeners for modal close buttons
+    closeButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
             loginModal.style.display = "none";
             signupModal.style.display = "none";
-        }
+        });
     });
 
-    window.onclick = function(event) {
+    // Event listeners for create account and sign in links in modals
+    if (createAccountLink) {
+        createAccountLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            loginModal.style.display = "none";
+            signupModal.style.display = "block";
+        });
+    }
+
+    if (signInLink) {
+        signInLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            signupModal.style.display = "none";
+            loginModal.style.display = "block";
+        });
+    }
+
+    // Close modals when clicking outside of them
+    window.addEventListener('click', (event) => {
         if (event.target == loginModal) {
             loginModal.style.display = "none";
-        } else if (event.target == signupModal) {
+        }
+        if (event.target == signupModal) {
             signupModal.style.display = "none";
         }
-    }
+    });
 
-    createAccountLink.onclick = function(event) {
-        event.preventDefault();
-        loginModal.style.display = "none";
-        signupModal.style.display = "block";
-    }
-
-    signInLink.onclick = function(event) {
-        event.preventDefault();
-        signupModal.style.display = "none";
-        loginModal.style.display = "block";
-    }
-
-    joinFableLink.onclick = function(event) {
-        event.preventDefault();
-        signupModal.style.display = "block";
-    }
-
-    navSignInLink.onclick = function(event) {
-        event.preventDefault();
-        loginModal.style.display = "block";
-    }
+    window.addEventListener('load', function () {
+        // Check if coming from login
+        if (sessionStorage.getItem('isLoggedIn') === 'true') {
+            // Clear the login state
+            sessionStorage.removeItem('isLoggedIn');
+        }
+    });
 });
