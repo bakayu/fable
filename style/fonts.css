@@ -1,0 +1,125 @@
+/* Gt-super fonts  */
+
+@font-face {
+    font-family: 'gt-super';
+    src: url('../fonts/GT-Super/GT-Super-Display-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt-super';
+    src: url('../fonts/GT-Super/GT-Super-Display-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt-super';
+    src: url('../fonts/GT-Super/GT-Super-Display-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* manuka font */
+
+@font-face {
+    font-family: 'manuka';
+    src: url('../fonts/manuka-font-family/TestManuka-Regular-BF663c33db89825.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'manuka';
+    src: url('../fonts/manuka-font-family/TestManuka-Medium-BF663c33db67c40.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'manuka';
+    src: url('../fonts/manuka-font-family/TestManuka-Bold-BF663c33db7b03f.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'manuka-black';
+    src: url('../fonts/manuka-font-family/TestManukaSlab-Black-BF663c33db53960.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* sohne font */
+
+@font-face {
+    font-family: 'sohne';
+    src: url('../fonts/sohne-font-family/TestSohneMono-Kraftig-BF663d89cd2bd2d.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sohne';
+    src: url('../fonts/sohne-font-family/TestSohneMono-KraftigKursiv-BF663d89ccea359.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'sohne';
+    src: url('../fonts/sohne-font-family/TestSohneMono-Halbfett-BF663d89cc69f9d.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sohne';
+    src: url('../fonts/sohne-font-family/TestSohneMono-HalbfettKursiv-BF663d89cc6d0d0.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'sohne';
+    src: url('../fonts/sohne-font-family/TestSohneMono-Fett-BF663d89cc6a8e8.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sohne-t';
+    src: url('../fonts/sohne-font-family/TestSohne-Kraftig-BF663d89cd37e26.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sohne-t';
+    src: url('../fonts/sohne-font-family/TestSohne-KraftigKursiv-BF663d89cd2bd4b.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'sohne-t';
+    src: url('../fonts/sohne-font-family/TestSohne-Halbfett-BF663d89cd2d67b.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sohne-t';
+    src: url('../fonts/sohne-font-family/TestSohne-HalbfettKursiv-BF663d89cd41624.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'sohne-t';
+    src: url('../fonts/sohne-font-family/TestSohne-Fett-BF663d89cca89ff.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
