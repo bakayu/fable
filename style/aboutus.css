@@ -1,0 +1,97 @@
+.body-head-up {
+    padding-top: 50px;
+    gap: 2.25em;
+}
+
+.card {
+    width: 20em;
+    height: 28em;
+    background: #171717;
+    transition: 1s ease-in-out;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card span {
+    font-family: gt-super;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+}
+
+.card .info {
+    font-family: sohne-t;
+    font-weight: 400;
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    margin: 1em;
+}
+
+.card .img {
+    width: 7.8em;
+    height: 7.8em;
+    background: white;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.card .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.card .share {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.card a {
+    color: white;
+    transition: .4s ease-in-out;
+}
+
+.card a img {
+    width: 20px;
+    height: 20px;
+}
+
+.card a path {
+    fill: white;
+}
+
+.card a:hover {
+    color: #568987;
+}
+
+.card a:hover path {
+    fill: #568987;
+}
+
+.card button {
+    padding: 0.8em 1.7em;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: .4s ease-in-out;
+}
+
+.card button:hover {
+    background: #568987;
+    color: white;
+    cursor: pointer;
+}

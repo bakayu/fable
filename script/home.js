@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const closeButtons = document.querySelectorAll(".close");
     const createAccountLink = document.getElementById("createAccountLink");
     const signInLink = document.getElementById("signInLink");
-    const sidebarLoginLink = document.getElementById("sidebarLoginLink");
-    const sidebarSignupLink = document.getElementById("sidebarSignupLink");
+    const sidebarSignoutLink = document.getElementById("sidebarSignoutLink");
     const sidebar = document.getElementById('sidebar');
     const moreButton = document.querySelector('.m-button');
     const closeButton = document.querySelector('.close-sidebar');
@@ -54,15 +53,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (sidebar.classList.contains('show')) {
             toggleSidebar();
         }
-    }
-
-    // Event listeners for sidebar links
-    if (sidebarLoginLink) {
-        sidebarLoginLink.addEventListener('click', openLoginModal);
-    }
-
-    if (sidebarSignupLink) {
-        sidebarSignupLink.addEventListener('click', openSignupModal);
     }
 
     // Event listeners for modal close buttons
