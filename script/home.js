@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Toggle sidebar
     function toggleSidebar() {
         sidebar.classList.toggle('show');
-        document.body.classList.toggle('no-scroll');
+        // document.body.classList.toggle('no-scroll');
     }
 
     moreButton.addEventListener('click', (event) => {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (!sidebar.contains(event.target) && !moreButton.contains(event.target)) {
             if (sidebar.classList.contains('show')) {
                 sidebar.classList.remove('show');
-                document.body.classList.remove('no-scroll');
+                // document.body.classList.remove('no-scroll');
             }
         }
     });
